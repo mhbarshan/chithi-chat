@@ -20,7 +20,7 @@ const MyChat = ({ fetchAgain }) => {
   const [socketConnected, setSocketConnected] = useState(false);
   const [onlineUsers, setOnlineUsers] = useState([]);
   const toast = useToast();
-  const ENDPOINT = "http://localhost:5000";
+  const ENDPOINT = "https://chithi-chat.onrender.com";
   var socket;
   const fetchChat = async () => {
     try {

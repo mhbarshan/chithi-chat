@@ -34,7 +34,7 @@ import UserListItem from "../../components/Auth/User/UserListItem";
 import { getSender } from "../../Config/ChatConfig";
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chithi-chat.onrender.com";
 var socket;
 
 const SideDrawer = () => {
