@@ -237,6 +237,24 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessage }) => {
           <ModalCloseButton />
           <ModalBody display="flex" flexDir="column" alignItems="center">
             <Box display="flex" w="100%" flexWrap="wrap">
+              {selectedChat.users.map(
+                (u) =>
+                  u._id === selectedChat.groupAdmin._id && (
+                    <span
+                      key={u._id}
+                      style={{
+                        paddingLeft: 10,
+                        fontSize: 20,
+                        fontWeight: 600,
+                        fontFamily: "Courier New",
+                      }}
+                    >
+                      <br></br> Admin: {u.name}
+                    </span>
+                  )
+              )}
+            </Box>
+            <Box display="flex" w="100%" flexWrap="wrap">
               {selectedChat.users.map((u) => (
                 <UserBadgeItem
                   key={u._id}
