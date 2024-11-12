@@ -25,14 +25,14 @@ const ScrollableChat = ({ messages }) => {
                     placement="bottom-start"
                     hasArrow
                   >
-                    {/* <Avatar
+                    <Avatar
                       mt="7px"
                       mr={1}
                       size="sm"
                       cursor="pointer"
                       name={m.sender.name}
                       src={m.sender.picture}
-                    /> */}
+                    />
                   </Tooltip>
                   // )
                 ))
@@ -63,7 +63,7 @@ const ScrollableChat = ({ messages }) => {
                 padding: "5px 15px",
                 maxWidth: "75%",
                 marginLeft: isSameSenderMargin(messages, m, i, user._id),
-                marginTop: isSameUser(messages, m, i, user._id) ? 3 : 10,
+                marginTop: isSameUser(messages, m, i, user._id) ? 1 : 10,
               }}
             >
               {m.content}
