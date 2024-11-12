@@ -23,7 +23,7 @@ import "./styles.css";
 import ScrollableChat from "../../pages/utils/ScrollableChat";
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chithi-chat.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
