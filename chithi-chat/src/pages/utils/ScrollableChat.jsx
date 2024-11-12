@@ -18,24 +18,23 @@ const ScrollableChat = ({ messages }) => {
           <div style={{ display: "flex" }} key={m._id}>
             {!m.chat.isGroupChat
               ? isSameSender(messages, m, i, user._id) ||
-                (isLastMessage(messages, i, user._id) && (
-                  // m.sender._id !== user._id && (
-                  <Tooltip
-                    label={m.sender.name}
-                    placement="bottom-start"
-                    hasArrow
-                  >
-                    <Avatar
-                      mt="7px"
-                      mr={1}
-                      size="sm"
-                      cursor="pointer"
-                      name={m.sender.name}
-                      src={m.sender.picture}
-                    />
-                  </Tooltip>
-                  // )
-                ))
+                (isLastMessage(messages, i, user._id) &&
+                  m.sender._id !== user._id && (
+                    <Tooltip
+                      label={m.sender.name}
+                      placement="bottom-start"
+                      hasArrow
+                    >
+                      <Avatar
+                        mt="7px"
+                        mr={1}
+                        size="sm"
+                        cursor="pointer"
+                        name={m.sender.name}
+                        src={m.sender.picture}
+                      />
+                    </Tooltip>
+                  ))
               : m.sender._id !== user._id && (
                   <Tooltip
                     label={m.sender.name}
