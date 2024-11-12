@@ -25,14 +25,14 @@ app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);
 
-app.use(notFound);
-app.use(errorHandler);
-
-app.use(express.static(path.join(__dirname, "/chithi-chat/dist")));
+app.use(express.static(path.join(__dirname, "./chithi-chat/dist")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "chithi-chat", "dist", "index.html"));
 });
+
+app.use(notFound);
+app.use(errorHandler);
 
 const server = app.listen(port, () => {
   connectToMongo();
