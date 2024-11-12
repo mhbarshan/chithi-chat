@@ -17,7 +17,7 @@ const ScrollableChat = ({ messages }) => {
         messages.map((m, i) => (
           <div style={{ display: "flex" }} key={m._id}>
             {!m.chat.isGroupChat
-              ? (isSameSender(messages, m, i, user._id) ||
+              ? (!isSameSender(messages, m, i, user._id) ||
                   (isLastMessage(messages, i, user._id) &&
                     m.sender._id !== user._id)) && (
                   <Tooltip
